@@ -1,5 +1,7 @@
 # C3D-tensorflow
 
+I changed something about py2 to py3 ,now it works on py2
+
 This is a repository trying to implement [C3D-caffe][5] on tensorflow,useing models directly converted from original C3D-caffe.    
 Be aware that there are about 5% video-level accuracy margin on UCF101 split1  between our implement in tensorflow and  the original C3D-caffe.  
 
