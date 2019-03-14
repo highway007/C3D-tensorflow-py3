@@ -1,6 +1,20 @@
 # C3D-tensorflow
 
-I changed something about py2 to py3 ,now it works on py3
+I changed something about py2 to py3 ,now it works on py3 with your own dataset
+
+To run this code, you should do:
+
+1.download dataset which looks like the format of UCF101, and put in actions.
+2.run ./list/convert_video_to_images.sh actions 5(You can see the meaning at the Requirements)
+3.run ./list/convert_images_to_list.sh actions 4
+4.change c3d_model.py line27,put your your number of class
+    NUM_CLASSES =
+5.change train_c3d_ucf101.py line204-214,to see if you want train a new model or use the pretrain model.
+  (note that:both class number should be same)
+6.run train_c3d_ucf101.py to train,and tensorboard --logdir visual_logs to see your accuracy and loss.
+
+TODO
+I will update the real-time code some days later.(refer: https://github.com/FingerRec/real_time_video_action_recognition.git)
 
 This is a repository trying to implement [C3D-caffe][5] on tensorflow,useing models directly converted from original C3D-caffe.    
 Be aware that there are about 5% video-level accuracy margin on UCF101 split1  between our implement in tensorflow and  the original C3D-caffe.  
