@@ -208,7 +208,7 @@ def run_training():
     if os.path.isfile(model_filename) and use_pretrained_model:
       saver.restore(sess, model_filename)
       print('pretrained_model!!!!!!!!!!!!!!!!!')
-    elif os.path.isfile(mymodel) and my_used_model:
+    elif my_used_model:
       print('my own model !!!!!!!!!!!!!!!!!!!!')
       saver.restore(sess,mymodel)
       print('restore!!!!!!!!!!!!!!!!!!!!!!!!!!')
